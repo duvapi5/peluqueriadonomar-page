@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark text-cream antialiased;
+  }
+  
+  /* Selección de texto con colores de barbería */
+  ::selection {
+    background-color: rgba(179, 18, 23, 0.4);
+    color: #f2e7d5;
+  }
+  
+  /* Scrollbar personalizado vintage */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0b0b0b;
+    border-left: 1px solid rgba(179, 18, 23, 0.2);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #b31217 0%, #1e3a8a 100%);
+    border-radius: 5px;
+    border: 2px solid #0b0b0b;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #dc2626 0%, #2563eb 100%);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden bg-gradient-to-r from-red-barber to-red-hover text-cream font-bold py-4 px-8 rounded-lg transition-all duration-300 text-lg shadow-xl shadow-red-barber/30 hover:shadow-red-barber/50 hover:scale-105;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] transition-transform duration-700;
+  }
+  
+  .btn-primary:hover::before {
+    @apply translate-x-[200%];
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-cream/30 hover:border-red-barber text-cream font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-red-barber/10 hover:shadow-lg hover:shadow-red-barber/20;
+  }
+  
+  .input-field {
+    @apply w-full bg-dark-lighter/50 border-2 border-cream/10 focus:border-red-barber rounded-lg px-4 py-3 text-cream placeholder-gray-barber/50 focus:outline-none focus:ring-2 focus:ring-red-barber/30 transition-all backdrop-blur-sm;
+  }
+  
+  .card {
+    @apply bg-gradient-to-b from-dark-lighter to-dark rounded-xl border-2 border-cream/10 p-6 shadow-lg hover:border-red-barber/30 transition-all duration-300;
+  }
+  
+  /* Card con efecto vintage barbería */
+  .card-vintage {
+    @apply relative bg-gradient-to-br from-dark-lighter via-dark to-dark-lighter rounded-xl border-2 border-cream/10 p-6 overflow-hidden;
+    box-shadow: 
+      0 4px 20px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(242, 231, 213, 0.05);
+  }
+  
+  .card-vintage::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1;
+    background: linear-gradient(90deg, #b31217, #f2e7d5, #1e3a8a);
+  }
+}
+
+@layer utilities {
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+  
+  /* Efecto de texto con glow rojo barbería */
+  .text-glow-red {
+    text-shadow: 0 0 20px rgba(179, 18, 23, 0.5), 0 0 40px rgba(179, 18, 23, 0.3);
+  }
+  
+  /* Efecto de texto con glow azul */
+  .text-glow-blue {
+    text-shadow: 0 0 20px rgba(30, 58, 138, 0.5), 0 0 40px rgba(30, 58, 138, 0.3);
+  }
+  
+  /* Efecto de borde con glow */
+  .border-glow-red {
+    box-shadow: 0 0 15px rgba(179, 18, 23, 0.3), inset 0 0 15px rgba(179, 18, 23, 0.1);
+  }
+  
+  @keyframes subtle-pulse {
+    0%, 100% {
+      opacity: 0.15;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.25;
+      transform: scale(1.02);
+    }
+  }
+  
+  .animate-subtle-pulse {
+    animation: subtle-pulse 8s ease-in-out infinite;
+  }
+  
+  /* Animación de franjas de barbería */
+  @keyframes barber-stripe-move {
+    from { background-position: 0 0; }
+    to { background-position: 0 48px; }
+  }
+  
+  .animate-barber-stripes {
+    animation: barber-stripe-move 2s linear infinite;
+  }
+
+  /* ===== VINTAGE LED EFFECTS - Classic Barber Shop Sign ===== */
+  
+  /* Vintage frame for BarberPole - textured dark background with red border */
+  .vintage-frame {
+    background: 
+      linear-gradient(135deg, rgba(11, 11, 11, 0.95) 0%, rgba(20, 20, 20, 0.9) 100%),
+      url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGZpbHRlciBpZD0iYSI+PGZlVHVyYnVsZW5jZSBiYXNlRnJlcXVlbmN5PSIuOSIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgLjEgMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsdGVyPSJ1cmwoI2EpIi8+PC9zdmc+');
+    border: 2px solid #b31217;
+    border-radius: 8px;
+    box-shadow: 
+      inset 0 1px 2px rgba(0, 0, 0, 0.5),
+      0 4px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Base LED glow - very subtle, classic sign illumination */
+  .vintage-led-base {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(179, 18, 23, 0.08) 0%,
+      rgba(30, 58, 138, 0.04) 50%,
+      transparent 100%
+    );
+    filter: blur(15px);
+    animation: vintagePulse 5s ease-in-out infinite;
+  }
+
+  /* Slow shifting gradient - minimal */
+  .vintage-led-shift {
+    background: linear-gradient(
+      120deg,
+      rgba(179, 18, 23, 0.04) 0%,
+      rgba(30, 58, 138, 0.06) 40%,
+      rgba(179, 18, 23, 0.03) 60%,
+      rgba(30, 58, 138, 0.05) 100%
+    );
+    background-size: 300% 300%;
+    animation: vintageShift 14s linear infinite;
+    opacity: 0.5;
+  }
+
+  /* Outer pulse for classic glow effect */
+  .vintage-led-pulse {
+    animation: vintageOuterPulse 6s ease-in-out infinite;
+  }
+
+  /* Header badge pulse - very subtle */
+  .vintage-pulse {
+    animation: vintageBadgePulse 3s ease-in-out infinite;
+  }
+
+  /* Header border glow */
+  .vintage-glow {
+    box-shadow: 0 1px 3px rgba(179, 18, 23, 0.15);
+  }
+
+  /* Vintage Animations - Slow and elegant */
+  @keyframes vintagePulse {
+    0%, 100% {
+      opacity: 0.5;
+      filter: blur(15px);
+    }
+    50% {
+      opacity: 0.7;
+      filter: blur(18px);
+    }
+  }
+
+  @keyframes vintageShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes vintageOuterPulse {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes vintageBadgePulse {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .vintage-led-base,
+    .vintage-led-shift,
+    .vintage-led-pulse,
+    .vintage-pulse {
+      animation: none !important;
+    }
+  }
+
+  /* Header Premium Effects */
+  .active\:scale-98:active {
+    transform: scale(0.98);
+  }
+}
