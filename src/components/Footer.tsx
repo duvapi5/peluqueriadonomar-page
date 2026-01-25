@@ -54,7 +54,7 @@ export default function Footer() {
             </div>
 
             <p className="text-gray-barber text-sm mt-4 italic">
-              "Más de 50 años de tradición y excelencia"
+              &ldquo;Más de 50 años de tradición y excelencia&rdquo;
             </p>
           </div>
 

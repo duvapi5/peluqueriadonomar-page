@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import BarberPole from "./BarberPole";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
