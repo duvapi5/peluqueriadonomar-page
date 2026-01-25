@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   description:
     "Reserva tu hora en 1 minuto. Más de 50 años de tradición en barbería. Av. Libertad #161, Local C, Rosario.",
   keywords: ["barbería", "peluquería", "reservas", "Rosario", "Luis Soto"],
+  icons: {
+    icon: "/icon",
+    apple: "/apple-icon",
+  },
 };
 
 export default function RootLayout({
@@ -15,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }

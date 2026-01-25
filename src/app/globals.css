@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-dark text-cream antialiased;
   }
@@ -116,7 +120,7 @@
     to { background-position: 0 48px; }
   }
   
-  .animate-barber-stripes {
+  .animate-barber-stripe {
     animation: barber-stripe-move 2s linear infinite;
   }
 
