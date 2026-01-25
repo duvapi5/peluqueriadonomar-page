@@ -119,7 +119,7 @@ export default function CTASection() {
                 Ubicación
               </p>
               <p className="text-gray-barber text-sm">
-                Av. Libertad #161, Local C
+                Av. Libertad #161, Local B
               </p>
             </div>
 

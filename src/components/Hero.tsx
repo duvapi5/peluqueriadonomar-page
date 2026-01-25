@@ -330,7 +330,7 @@ export default function Hero() {
                       </a>
                     </div>
                     <p className="text-sm sm:text-base text-cream leading-relaxed">
-                      Av. Libertad 161, Local C, Rosario, Rengo
+                      Av. Libertad 161, Local B, Rosario, Rengo
                     </p>
                   </div>
                 </div>

@@ -108,7 +108,7 @@ export default function Footer() {
               </a>
               <p className="flex items-start gap-2">
                 <span className="text-lg">🏠</span>
-                <span>Av. Libertad #161, Local C, Rosario</span>
+                <span>Av. Libertad #161, Local B, Rosario</span>
               </p>
             </div>
           </div>

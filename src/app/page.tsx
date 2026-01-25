@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import CTASection from "@/components/CTASection";
+import DrinkMenu from "@/components/DrinkMenu";
 
 export default function HomePage() {
   // Servicios destacados para mostrar en home
@@ -119,7 +120,7 @@ export default function HomePage() {
                     {/* Precio */}
                     <div className="flex items-center justify-between">
                       <p className="text-cream font-bold text-3xl group-hover:text-red-barber transition-colors">
-                        ${service.price.toLocaleString()}
+                        ${service.price.toLocaleString("es-CL")}
                       </p>
                     </div>
                   </div>
@@ -140,6 +141,9 @@ export default function HomePage() {
       </main>
 
       <Footer />
+      
+      {/* Menú flotante de bebidas */}
+      <DrinkMenu />
     </div>
   );
 }
