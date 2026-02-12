@@ -151,6 +151,17 @@ export default function Footer() {
           <p className="text-xs text-cream/30 mt-2">
             Tradición desde 1970 · Luis Soto, Peluquero
           </p>
+          <p className="text-xs text-gray-barber/60 mt-3">
+            Hecho con ❤️ por{" "}
+            <a
+              href="https://duvanapiolaza.cl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-barber hover:text-cream transition-colors font-medium"
+            >
+              Duván Apiolaza
+            </a>
+          </p>
         </div>
       </div>
 
