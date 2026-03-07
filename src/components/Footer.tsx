@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -151,17 +152,27 @@ export default function Footer() {
           <p className="text-xs text-cream/30 mt-2">
             Tradición desde 1970 · Luis Soto, Peluquero
           </p>
-          <p className="text-xs text-gray-barber/60 mt-3">
-            Hecho con ❤️ por{" "}
+          <div className="mt-4 flex justify-center">
             <a
-              href="https://duvanapiolaza.cl"
+              href="https://lowsystem.cl"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-red-barber hover:text-cream transition-colors font-medium"
+              className="group inline-flex items-center gap-3 rounded-full border border-cream/10 bg-dark/80 px-4 py-2.5 shadow-[0_8px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:border-blue-400/40 hover:bg-dark hover:shadow-[0_10px_36px_rgba(37,99,235,0.14)]"
             >
-              Duván Apiolaza
+              <span className="text-xs font-semibold tracking-[0.02em] text-gray-barber/90 transition-colors duration-300 group-hover:text-cream/90">
+                Desarrollado por
+              </span>
+              <span className="relative inline-block h-5 w-[22px] shrink-0">
+                <Image
+                  src="/logo-ls.png"
+                  alt="LowSystem"
+                  fill
+                  sizes="22px"
+                  className="object-contain"
+                />
+              </span>
             </a>
-          </p>
+          </div>
         </div>
       </div>
 

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import CTASection from "@/components/CTASection";
 import DrinkMenu from "@/components/DrinkMenu";
+import Gallery from "@/components/Gallery";
 
 export default function HomePage() {
   // Servicios destacados para mostrar en home
@@ -135,6 +136,9 @@ export default function HomePage() {
           {/* Líneas decorativas inferiores */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-900/30 to-transparent" />
         </section>
+
+        {/* Galería Section */}
+        <Gallery />
 
         {/* CTA Reservar Section */}
         <CTASection />
