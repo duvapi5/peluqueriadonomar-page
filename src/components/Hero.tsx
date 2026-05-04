@@ -308,7 +308,7 @@ export default function Hero() {
                         Ubicación
                       </p>
                       <a
-                        href="https://www.google.com/maps/dir/?api=1&destination=Av.+Libertad+161,+2940000+Rengo,+O'Higgins,+Chile"
+                        href="https://maps.app.goo.gl/EZAYZQ2v6sGsdxeE7"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 bg-red-barber hover:bg-red-barber/80 text-cream text-[10px] sm:text-xs font-medium rounded-md sm:rounded-lg transition-all shadow-md hover:shadow-lg flex-shrink-0"
