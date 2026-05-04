@@ -76,7 +76,7 @@ export default function Footer() {
                 href="#servicios"
                 className="block text-gray-barber hover:text-cream hover:translate-x-1 transition-all"
               >
-                → Degradado
+                → Corte Degradado
               </Link>
               <Link
                 href="#servicios"
@@ -88,7 +88,7 @@ export default function Footer() {
                 href="#servicios"
                 className="block text-gray-barber hover:text-cream hover:translate-x-1 transition-all"
               >
-                → Cejas
+                → Cejas (Navaja)
               </Link>
             </div>
           </div>

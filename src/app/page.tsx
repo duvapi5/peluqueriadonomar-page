@@ -11,23 +11,23 @@ export default function HomePage() {
     {
       name: "Corte Tradicional",
       description: "Corte clásico con tijera y máquina, estilo tradicional",
-      price: 6000,
+      price: 7000,
       icon: "✂",
     },
     {
-      name: "Degradado",
+      name: "Corte Degradado",
       description: "Corte moderno con degradado profesional",
-      price: 7000,
+      price: 8000,
       icon: "▦",
     },
     {
       name: "Barba",
       description: "Arreglo y diseño de barba con navaja",
-      price: 3000,
+      price: 4000,
       icon: "〰",
     },
     {
-      name: "Cejas",
+      name: "Cejas (Navaja)",
       description: "Perfilado de cejas con navaja tradicional",
       price: 2000,
       icon: "⎯",
@@ -119,8 +119,8 @@ export default function HomePage() {
                     </div>
 
                     {/* Precio */}
-                    <div className="flex items-center justify-between">
-                      <p className="text-cream font-bold text-3xl group-hover:text-red-barber transition-colors">
+                    <div className="flex items-center">
+                      <p className="text-cream font-bold text-3xl group-hover:text-red-barber transition-colors leading-none">
                         ${service.price.toLocaleString("es-CL")}
                       </p>
                     </div>
@@ -145,7 +145,7 @@ export default function HomePage() {
       </main>
 
       <Footer />
-      
+
       {/* Menú flotante de bebidas */}
       <DrinkMenu />
     </div>
